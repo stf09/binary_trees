@@ -1,9 +1,12 @@
 #include "binary_trees.h"
+#include "stdlib.h"
+
 /**
 * binary_tree_is_perfect -  checks if a binary tree is perfect
 * @tree: root node of the tree
 * Return: if tree is full or not
 */
+
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (tree == NULL)
@@ -22,19 +25,6 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 			return (1);
 	}
 	return (0);
-}
-
-/**
-* binary_tree_height - measures the height of a binary tree
-* @tree: pointer to node root
-* Return:  measure the height.
-*/
-size_t binary_tree_height(const binary_tree_t *tree)
-{
-	if (tree == NULL)
-		return (0);
-
-	return (maxDepth(tree) - 1);
 }
 
 /**
@@ -64,4 +54,18 @@ int maxDepth(const binary_tree_t *node)
 			return (rDepth + 1);
 		}
 	}
+}
+
+/**
+* binary_tree_height - measures the height of a binary tree
+* @tree: pointer to node root
+* Return:  measure the height.
+*/
+
+size_t binary_tree_height(const binary_tree_t *tree)
+{
+        if (tree == NULL)
+                return (0);
+
+        return (maxDepth(tree) - 1);
 }
