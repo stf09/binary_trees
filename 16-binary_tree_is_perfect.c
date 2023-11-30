@@ -32,6 +32,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 * @node: pointer to node
 * Return: measure the height.
 */
+
 int maxDepth(const binary_tree_t *node)
 {
 	if (node == NULL)
